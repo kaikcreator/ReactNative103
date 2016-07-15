@@ -10,4 +10,10 @@
 
 @interface UserInputView : UIView
 
+@property (weak, nonatomic) IBOutlet UITextField *firstNameInput;
+@property (weak, nonatomic) NSString *firstName;
+
+@property (weak, nonatomic) IBOutlet UITextField *lastNameInput;
+@property (weak, nonatomic) NSString *lastName;
+
 @end

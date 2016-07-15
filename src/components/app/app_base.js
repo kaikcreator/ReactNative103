@@ -20,7 +20,7 @@ class App extends Component {
         return (
             <View style={styles.container} >
                 <Greeting style={styles.greeting} textStyle={styles.textStyle} />
-                <UserInput style={styles.userInput}/>
+                <UserInput style={styles.userInput} firstName="Chuck" lastName="Norris"/>
             </View>
         );
     }

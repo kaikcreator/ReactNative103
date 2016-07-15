@@ -10,12 +10,12 @@
 
 @implementation UserInputView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setFirstName:(NSString *)firstName {
+  self.firstNameInput.text = firstName;
 }
-*/
+
+- (void)setLastName:(NSString *)lastName {
+  self.lastNameInput.text = lastName;
+}
 
 @end

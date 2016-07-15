@@ -23,6 +23,12 @@
 //Declare it as a React Native Module
 RCT_EXPORT_MODULE()
 
+//export properties
+RCT_EXPORT_VIEW_PROPERTY(firstName, NSString)
+RCT_EXPORT_VIEW_PROPERTY(lastName, NSString)
+
+
+
 - (UIView *)view{
 
   return [[[NSBundle mainBundle] loadNibNamed:@"UserInputView" owner:nil options:nil] objectAtIndex:0];
