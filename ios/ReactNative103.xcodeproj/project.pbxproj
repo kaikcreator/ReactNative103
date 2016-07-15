@@ -134,7 +134,6 @@
 		731664451D38008300773C3B /* UserInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserInputView.xib; path = Views/UserInputView.xib; sourceTree = "<group>"; };
 		7360AF341D38DD4C00FB4CB8 /* UserInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInputView.h; path = Views/UserInputView.h; sourceTree = "<group>"; };
 		7360AF351D38DD4C00FB4CB8 /* UserInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInputView.m; path = Views/UserInputView.m; sourceTree = "<group>"; };
-		7360AF371D38DD8D00FB4CB8 /* UserInputViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInputViewManager.h; path = Views/UserInputViewManager.h; sourceTree = "<group>"; };
 		7360AF381D38DD8D00FB4CB8 /* UserInputViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInputViewManager.m; path = Views/UserInputViewManager.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -279,7 +278,6 @@
 				731664451D38008300773C3B /* UserInputView.xib */,
 				7360AF341D38DD4C00FB4CB8 /* UserInputView.h */,
 				7360AF351D38DD4C00FB4CB8 /* UserInputView.m */,
-				7360AF371D38DD8D00FB4CB8 /* UserInputViewManager.h */,
 				7360AF381D38DD8D00FB4CB8 /* UserInputViewManager.m */,
 			);
 			name = Views;

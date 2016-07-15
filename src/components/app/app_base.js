@@ -15,12 +15,19 @@ class App extends Component {
     constructor(props){
         super(props);
     }
+
+    updateUser(user){
+        console.log(user);
+    }
     
     render(){
         return (
             <View style={styles.container} >
                 <Greeting style={styles.greeting} textStyle={styles.textStyle} />
-                <UserInput style={styles.userInput} firstName="Chuck" lastName="Norris"/>
+                <UserInput style={styles.userInput} 
+                    firstName="Chuck" 
+                    lastName="Norris" 
+                    onUpdate={this.updateUser}/>
             </View>
         );
     }

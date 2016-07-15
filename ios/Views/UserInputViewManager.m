@@ -13,7 +13,7 @@
 
 #import "RCTViewManager.h"
 
-@interface UserInputViewManager : RCTViewManager
+@interface UserInputViewManager : RCTViewManager<UserInputDelegate>
 
 @end
 
@@ -27,12 +27,27 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(firstName, NSString)
 RCT_EXPORT_VIEW_PROPERTY(lastName, NSString)
 
+//export event handler
+RCT_EXPORT_VIEW_PROPERTY(onUpdate, RCTBubblingEventBlock)
+
 
 
 - (UIView *)view{
-
-  return [[[NSBundle mainBundle] loadNibNamed:@"UserInputView" owner:nil options:nil] objectAtIndex:0];
-
+  UserInputView* userInputView = [[[NSBundle mainBundle] loadNibNamed:@"UserInputView" owner:nil options:nil] objectAtIndex:0];
+  userInputView.delegate = self;
+  return userInputView;
 }
+
+//delegate methods
+- (void) onUserInputUpdate:(UserInputView*)view{
+  //NSLog(@"updating user input!!!");
+  view.onUpdate(@{
+                    @"user":@{
+                      @"firstName": view.firstNameInput.text,
+                      @"lastName": view.lastNameInput.text
+                    }
+                  });
+}
+
 
 @end

@@ -8,12 +8,31 @@
 
 #import <UIKit/UIKit.h>
 
+#import "RCTComponent.h"
+
+@class UserInputView;
+
+//define delegate
+@protocol UserInputDelegate <NSObject>
+@required
+- (void) onUserInputUpdate:(UserInputView*)view;
+@end
+
+
 @interface UserInputView : UIView
+
+//define button callback
+-(IBAction) updateUser: (id)sender;
+
+
+@property (weak, nonatomic) id <UserInputDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameInput;
 @property (weak, nonatomic) NSString *firstName;
 
 @property (weak, nonatomic) IBOutlet UITextField *lastNameInput;
 @property (weak, nonatomic) NSString *lastName;
+
+@property(nonatomic, copy) RCTBubblingEventBlock onUpdate;
 
 @end

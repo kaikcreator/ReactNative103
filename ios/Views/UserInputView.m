@@ -18,4 +18,9 @@
   self.lastNameInput.text = lastName;
 }
 
+-(IBAction) updateUser: (id)sender{
+  if(self.delegate)
+     [self.delegate onUserInputUpdate:self];
+}
+
 @end
