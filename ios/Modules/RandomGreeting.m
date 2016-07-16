@@ -16,8 +16,7 @@ static NSArray *_greetings;
 @implementation RandomGreeting
 
 
-  //Declare that it is a React Native Module
-  RCT_EXPORT_MODULE()
+  //TODO Declare that it is a React Native Module
 
 
   //initialize private data
@@ -39,19 +38,11 @@ static NSArray *_greetings;
   };
 
 
-  //export method sayFirstName
-  RCT_EXPORT_METHOD( sayFirstName:(NSString *)firstName lastName:(NSString *)lastName )
-  {
-    RCTLogInfo([RandomGreeting randomGreeting:firstName lastName:lastName]);
-  }
+  //TODO export method sayFirstName
 
 
-  //export method with custom name (say), firstName and lastName arguments and return a promise
-  RCT_REMAP_METHOD(say, firstName:(NSString *)firstName lastName:(NSString *)lastName resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock) reject )
-  {
-    NSString* greeting = [RandomGreeting randomGreeting:firstName lastName:lastName];
-    resolve(greeting);
-  }
+  //TODO export method with custom name method (say), firstName and lastName arguments and return a promise
+
 
 
 @end

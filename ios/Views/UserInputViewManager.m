@@ -20,15 +20,13 @@
 
 @implementation UserInputViewManager
 
-//Declare it as a React Native Module
-RCT_EXPORT_MODULE()
+//TODO: Declare it as a React Native Module
 
-//export properties
-RCT_EXPORT_VIEW_PROPERTY(firstName, NSString)
-RCT_EXPORT_VIEW_PROPERTY(lastName, NSString)
 
-//export event handler
-RCT_EXPORT_VIEW_PROPERTY(onUpdate, RCTBubblingEventBlock)
+//TODO: export properties
+
+
+//TODO: export event handler
 
 
 
@@ -40,13 +38,7 @@ RCT_EXPORT_VIEW_PROPERTY(onUpdate, RCTBubblingEventBlock)
 
 //delegate methods
 - (void) onUserInputUpdate:(UserInputView*)view{
-  //NSLog(@"updating user input!!!");
-  view.onUpdate(@{
-                    @"user":@{
-                      @"firstName": view.firstNameInput.text,
-                      @"lastName": view.lastNameInput.text
-                    }
-                  });
+  //TODO: complete method to use callback
 }
 
 

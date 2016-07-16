@@ -28,11 +28,11 @@
 @property (weak, nonatomic) id <UserInputDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameInput;
-@property (weak, nonatomic) NSString *firstName;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *lastNameInput;
-@property (weak, nonatomic) NSString *lastName;
 
-@property(nonatomic, copy) RCTBubblingEventBlock onUpdate;
+
+
 
 @end

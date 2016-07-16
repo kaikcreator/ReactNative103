@@ -10,13 +10,7 @@
 
 @implementation UserInputView
 
-- (void)setFirstName:(NSString *)firstName {
-  self.firstNameInput.text = firstName;
-}
-
-- (void)setLastName:(NSString *)lastName {
-  self.lastNameInput.text = lastName;
-}
+//TODO connect IBOutlet text with NSStrig properties
 
 -(IBAction) updateUser: (id)sender{
   if(self.delegate)

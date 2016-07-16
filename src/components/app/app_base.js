@@ -2,7 +2,8 @@ import React,  { Component } from 'react';
 import { connect } from 'react-redux';
 import {
     StyleSheet,
-    View
+    View,
+    Text
 } from 'react-native';
 
 
@@ -10,7 +11,7 @@ import {
 import { updateUser } from '../../actions';
 //components
 import Greeting from '../greeting/greeting';
-import UserInput from '../userInput/userInputView';
+//import UserInput native component
 
 
 class App extends Component {
@@ -23,12 +24,7 @@ class App extends Component {
         return (
             <View style={styles.container} >
                 <Greeting user={this.props.user} style={styles.greeting} textStyle={styles.textStyle} />
-
-                <UserInput style={styles.userInput} 
-                    firstName="Chuck" 
-                    lastName="Norris" 
-                    onUpdate={this.props.updateUser.bind(this)}
-                />
+                <Text style={[styles.userInput, styles.textStyle]}>REPLACE ME by userInput native component</Text>
             </View>
         );
     }
