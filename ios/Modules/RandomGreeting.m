@@ -27,7 +27,7 @@ static NSArray *_greetings;
                 @"Welcome %@ %@",
                 @"Come on! Mr %@ %@ is here",
                 @"Ladies & Gentelmen, here is %@ %@",
-                @"Ey dude!"];
+                @"%@,ey dude!"];
   }
 
 

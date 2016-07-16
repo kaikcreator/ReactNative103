@@ -20,8 +20,20 @@ export default class extends Component{
     }
 
     componentWillMount(){
-        RandomGreeting.sayFirstName('Chuck', 'Norris');
-        RandomGreeting.say('Liam', 'Neeson').then((value) =>{ this.setState({greeting:value}); });
+        RandomGreeting.sayFirstName('Liam', 'Neeson');
+        RandomGreeting.say('Chuck', 'Norris').then((value) =>{ this.setState({greeting:value}); });
+    }
+
+    //We want to call a method when props are updated
+    componentWillReceiveProps(nextProps) {
+        RandomGreeting.say(nextProps.user.firstName, nextProps.user.lastName)
+        .then((value) =>{
+            this.setState({greeting:value}); });
+    }
+
+    //prevent extra rendering when props are updated but greeting promise has not been resolved yet
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextState.greeting !== this.state.greeting;
     }
     
     render(){

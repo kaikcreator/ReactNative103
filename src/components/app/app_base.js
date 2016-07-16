@@ -1,11 +1,14 @@
 import React,  { Component } from 'react';
+import { connect } from 'react-redux';
 import {
     StyleSheet,
     View
 } from 'react-native';
 
 
-//project imports
+//update user action
+import { updateUser } from '../../actions';
+//components
 import Greeting from '../greeting/greeting';
 import UserInput from '../userInput/userInputView';
 
@@ -15,19 +18,17 @@ class App extends Component {
     constructor(props){
         super(props);
     }
-
-    updateUser(user){
-        console.log(user);
-    }
     
     render(){
         return (
             <View style={styles.container} >
-                <Greeting style={styles.greeting} textStyle={styles.textStyle} />
+                <Greeting user={this.props.user} style={styles.greeting} textStyle={styles.textStyle} />
+
                 <UserInput style={styles.userInput} 
                     firstName="Chuck" 
                     lastName="Norris" 
-                    onUpdate={this.updateUser}/>
+                    onUpdate={this.props.updateUser.bind(this)}
+                />
             </View>
         );
     }
@@ -61,4 +62,11 @@ const styles = StyleSheet.create({
 });
 
 
-export default App;
+mapStateToProps = (state) =>{
+    return{
+        user: state.user
+    }
+}
+
+//connect updateUser action and user redux state to component
+export default connect(mapStateToProps, {updateUser})(App);
