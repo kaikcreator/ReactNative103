@@ -40,7 +40,7 @@ public class UserInputViewManager extends SimpleViewManager<UserInputView> {
         return v;
     }
 
-    @ReactProp(name = "name")
+    @ReactProp(name = "firstName")
     public void setName(UserInputView view, @Nullable String name) {
         view.setName(name);
     }

@@ -13,7 +13,6 @@ import android.widget.TextView;
  */
 public class UserInputView extends RelativeLayout {
 
-    private TextView mGreeting;
     private EditText mName;
     private EditText mLastName;
     private Button mButton;
@@ -27,7 +26,6 @@ public class UserInputView extends RelativeLayout {
                 (Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.user_input_view, this);
 
-        mGreeting = (TextView)v.findViewById(R.id.greeting);
         mName = (EditText)v.findViewById(R.id.name);
         mLastName = (EditText)v.findViewById(R.id.lastName);
         mButton = (Button)v.findViewById(R.id.button);

@@ -37,6 +37,7 @@ public class RandomGreetingModule extends ReactContextBaseJavaModule {
         return String.format(random, firstName, lastName);
     }
 
+    @ReactMethod
     public void sayFirstName(String firstName, String lastName) {
         Log.i(RandomGreetingModule.class.getSimpleName(), randomGreeting(firstName, lastName));
     }
